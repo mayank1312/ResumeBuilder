@@ -559,7 +559,7 @@ const EditResume=()=>{
 
 
   const downloadPDF = async () => {
-    const element = thumbnailRef.current;
+    const element = resumeDownloadRef.current;
     if (!element) {
       toast.error("Failed to generate PDF. Please try again.");
       return;
@@ -581,9 +581,6 @@ const EditResume=()=>{
     document.head.appendChild(override);
   
     try {
-      // Add a small delay to ensure DOM is ready and prevent white screen
-      await new Promise(resolve => setTimeout(resolve, 100));
-      
       await html2pdf()
         .set({
           margin:       0,
@@ -595,8 +592,6 @@ const EditResume=()=>{
             backgroundColor: "#FFFFFF",
             logging:         false,
             windowWidth:     element.scrollWidth,
-            allowTaint:      true,
-            foreignObjectRendering: false
           },
           jsPDF:        {
             unit:       "mm",
@@ -612,25 +607,15 @@ const EditResume=()=>{
   
       toast.success("PDF downloaded successfully!", { id: toastId });
       setDownloadSuccess(true);
-      
-      // Close modal and redirect after successful download
-      setTimeout(() => {
-        setOpenPreviewModal(false);
-        setDownloadSuccess(false);
-        navigate("/");
-        window.location.reload();
-      }, 1500);
+      setTimeout(() => setDownloadSuccess(false), 3000);
   
     } catch (err) {
-      console.error("PDF error:", err);
+      console.error(err);
       toast.error(`Failed to generate PDF: ${err.message}`, { id: toastId });
   
     } finally {
-      // Clean up and ensure UI is responsive
-      setTimeout(() => {
-        document.getElementById("__pdf_color_override__")?.remove();
-        setIsDownloading(false);
-      }, 100);
+      document.getElementById("__pdf_color_override__")?.remove();
+      setIsDownloading(false);
     }
   };
 
