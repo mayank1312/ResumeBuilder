@@ -69,11 +69,5 @@ https://resumebuilder-aohs.onrender.com/
 <img width="1366" height="768" alt="Screenshot (303)" src="https://github.com/user-attachments/assets/01c798b9-150b-4061-bee3-942c630c2e88" />
 <img width="1366" height="768" alt="Screenshot (302)" src="https://github.com/user-attachments/assets/e4c6a191-2905-45fe-b0a7-6edfb98758fa" />
 <img width="1366" height="768" alt="Screenshot (301)" src="https://github.com/user-attachments/assets/10a6c1af-3e27-4a91-ab87-8cb883692451" />
-<img width="1366" height="768" alt="Screenshot (300)" src="https://github.com/user-attachments/assets/514868e0-fa1c-4600-a3d3-4cbdc3f7ee75" />
-<img width="1366" height="768" alt="Screenshot (299)" src="https://github.com/user-attachments/assets/59cc7704-a27b-4f7d-ae43-d3f811c96878" />
-<img width="1366" height="768" alt="Screenshot (298)" src="https://github.com/user-attachments/assets/8decb7e6-33f8-48ab-b655-ae05bffd3494" />
-<img width="1366" height="768" alt="Screenshot (297)" src="https://github.com/user-attachments/assets/b8fa82b6-8d5c-410e-9997-840376e0b17d" />
-<img width="1366" height="768" alt="Screenshot (296)" src="https://github.com/user-attachments/assets/d9963e59-7764-4266-91b2-4e5b8f3b5c2f" />
-<img width="1366" height="768" alt="Screenshot (310)" src="https://github.com/user-attachments/assets/a666fe8e-8f04-4094-be02-74a6597fb757" />
-<img width="1366" height="768" alt="Screenshot (309)" src="https://github.com/user-attachments/assets/0ee237e4-89cb-4130-8714-000bf24a378e" />
+
 
