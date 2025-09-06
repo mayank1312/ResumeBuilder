@@ -607,6 +607,10 @@ const EditResume=()=>{
   
       toast.success("PDF downloaded successfully!", { id: toastId });
       setDownloadSuccess(true);
+      setTimeout(()=>{
+        navigate("/dashboard"),
+      window.location.reload()
+      },2000)
       setTimeout(() => setDownloadSuccess(false), 3000);
   
     } catch (err) {
@@ -773,17 +777,19 @@ const EditResume=()=>{
                     <span className=""> Completion: {completionPercentage}%</span>
                  </div>
                 </div>
-                <div className={containerStyles.pdfPreview}>
-                    <div className="a4-wrapper">
-                        <div className="w-full h-full">
-                            <RenderResume key={`pdf-${resumeData?.template?.theme}`}
-                                templateId={resumeData?.template?.theme || ""}
-                                resumeData={resumeData}
-                                containerWidth={800}
-                            />
-                        </div>
-                    </div>
-                </div>
+                <div className={containerStyles.pdfPreview} ref={resumeDownloadRef}>
+  <div className="a4-wrapper">
+    <div className="w-full h-full">
+      <RenderResume
+        key={`pdf-${resumeData?.template?.theme}`}
+        templateId={resumeData?.template?.theme || ""}
+        resumeData={resumeData}
+        containerWidth={800}
+      />
+    </div>
+  </div>
+</div>
+
              </div>
 
             </Modal>
