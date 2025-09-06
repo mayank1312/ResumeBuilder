@@ -617,6 +617,7 @@ const EditResume=()=>{
       setTimeout(() => {
         setOpenPreviewModal(false);
         setDownloadSuccess(false);
+        navigate("/dashboard");
         window.location.reload();
       }, 1500);
   
